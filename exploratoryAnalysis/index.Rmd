@@ -1,0 +1,62 @@
+---
+title: "index"
+output: html_document
+---
+```{r, , include = F}
+library("knitr")
+library("tidyverse")
+```
+
+
+## Introduction
+Hate crimes are crimes or _attacks_ on specific persons due to their belonging to a **particular group.** For example, racially-motivated hate crimes are made against a victim because of their _race_ or _ancestry_. These type of crimes are very **different** than the more mainstream crimes such as robberies. When one attempts to rob a store, they should expect to **gain something** (e.g. money). However, there is absolutely **nothing** to gain from hate crimes, but people _still_ perform them.
+  
+We have found a dataset on the **number** of _types_ of hate crimes (race, religion, sexual orientation, disability, gender, and gender identity). This is on hate crimes in the **United States** during 2019. Other information included is the "agency" (such as a specific city or a college campus) and their **population**. Additionally, there are **quarterly sums** of hate crimes for **each** location. 
+
+
+## Summary
+
+There were many categories to group by in this dataset. We had states, different motives for hate crimes, quarters of the year, and how many rows and columns there are in the dataset. However, the particular values we calculated and focused on are the total amount of each different hate crimes per state and total overall for each state. So, we recorded **Total Race**, **Total Religion**, **Total Sex**, **Total Disability**, **Total Gender**, **Total Gender Identity**, and **Total Hate Crimes**. The purpose of gathering this information is to see what hate crimes are more prevalent in each state
+
+```{r, echo = FALSE}
+source("tableSummary.R")
+colnames(pretty_tableTotal) <- c('States', 'Total Race', 'Total Religion', 'Total Sex', 'Total Disability', 'Total Gender', 'Total Gender Identity', 'Total Hate Crimes')
+kable(pretty_tableTotal)
+```
+
+
+## Data Visualizations
+
+### Bar Chart
+
+```{r, echo = FALSE}
+source("barChart.R")
+bar_chart_hate_crime
+```
+
+The purpose of including this chart was to show the **total** amounts of _each_ type of hate crime that occurred in the US in 2019. We wanted to see which hate crimes occurred the **most**. In this case, it was _race_ hate crimes, followed by _religion_ and _sexual orientation_. But the _overall_ purpose of this chart is to show the **relative** frequencies or totals of the different kinds of hate crimes that occurred in the country that year. With this visualization, we can answer the question of "which hate crimes are the **most** or alternatively, **least** common (in 2019)?"
+
+One _very_ noticeable observation from this chart is that **race** hate crimes happened so much **more** than every _other_ type of hate crime. Religion and sexual orientation are the second and third most common respectively, although race _beats_ them by a **long shot.** The other types of hate crimes (disability, gender, and gender identity) happened much less often in 2019.
+
+### Pie Chart
+
+```{r, echo = FALSE}
+source("PieChart.R")
+pie_chart_hate_crime
+```
+
+The purpose of this chart was to demonstrate how much **proportion** each hate crime category takes places withn the records of US 2019 hate crimes. This visualization adds up all crime incidents and display them as a pie chart to show how much of one type of hate crime compared to the total hate crime incidents. With this visualization, it is clear which type of hate crime has a bigger proportion in the total crime incidents.
+
+In this graph it is clearly shown that race, ethnicity and ancestry has a large proportion compared to other hate crimes, about 50-60%, followed by religion and sexual orietation, both have a proportion of around 20%.
+
+### Scatter Plot Chart
+
+```{r, echo = FALSE}
+source("ScatterPlotChart.R")
+scatter_plot_hate_crime_chart
+```
+
+The purpose of this chart was to display the **combined** number hate crimes happening in the _different_ universities that are located in Washington during 2019. 
+This visualization, which would be mostly important for students and professors at the Universities, adds in various data collected in Washington universities and adds them to show which university is the safest when it comes to motivated crimes and which one is the worst. 
+
+The chart signalled that University of Washington was the safest university in 2019 having only 1 hate crime. Eastern Washington University, on the other hand, was the worst at being able to avoid motivated crimes, having a total of 8 hate crimes.
