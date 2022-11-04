@@ -1,5 +1,5 @@
 # Project Proposal
-#Shiny App: https://agampreet.shinyapps.io/HateCrime/
+Shiny App: https://agampreet.shinyapps.io/HateCrime/
 ### Domain of Interest - Crime
 
 **Why are you interested in this field/domain?**
