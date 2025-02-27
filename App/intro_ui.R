@@ -24,7 +24,7 @@ intro <- tabPanel(title = "Introduction",
                   br(),
                   br(),
                   p("This project is based on the data provided by this ",
-                    tags$a(href="https://raw.githubusercontent.com/info201b-2021-aut/final-project-tdao09/main/data/Hate_Crime_Incidents_per_Bias_Motivation_and_Quarter_by_State_Federal_and_Agency_2019.csv?token=AV5GX7FAKC3XTDSH7WCQC3TBXF7YQ", "dataset."),
+                    tags$a(href="https://raw.githubusercontent.com/ryanvle/Hate-Crimes/refs/heads/main/data/Hate_Crime_Incidents_per_Bias_Motivation_and_Quarter_by_State_Federal_and_Agency_2019.csv", "dataset."),
                     "This dataset stores the records of different 
                             states in the United States and the number of hate
                             crimes that occured there organized by the specific 

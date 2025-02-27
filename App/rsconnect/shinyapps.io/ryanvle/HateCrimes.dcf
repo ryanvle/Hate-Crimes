@@ -1,0 +1,10 @@
+name: HateCrimes
+title:
+username: ryanvle
+account: ryanvle
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14121472
+bundleId: 9867652
+url: https://ryanvle.shinyapps.io/HateCrimes/
+version: 1
